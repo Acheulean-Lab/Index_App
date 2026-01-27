@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      margin: 0; 
+      font-family: "Universe", sans-serif; 
+      background: #dbe4eb; 
+      color: black; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 900px;
+      counter-reset: item-counter;
+    }
+    .grid-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 6px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      background: transparent;
+    }
+    .grid-item:hover {
+      background: rgb(0, 0, 0);
+      color: white;
+    }
+    .grid-item:hover::before {
+      color: white;
+    }
+    .grid-item:hover button {
+      color: white;
+    }
+    .grid-item::before {
+      counter-increment: item-counter;
+      content: counter(item-counter);
+      font-size: 18px;
+      margin-right: 20px;
+      color: black;
+    }
+    .grid-item button {
+      padding-left: 48px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: black;
+      text-align: left;
+      flex: 1;
+      width: 100%;
+    }
+    .title {
+      padding-left: 102px;
+      padding-bottom: 96px;
+      font-size: 18px;
+     color: black;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid rgb(0, 0, 0);
+      margin: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <hr>
+    <div class="title">Index</div>
+    <hr>
+    <div class="grid-item" onclick="loadSite('https://www.acheuleanlab.com/')">
+      <button>Acheulean Lab</button>
+    </div>
+    <hr>
+    <div class="grid-item" onclick="loadSite('https://ethan-rubens.com')">
+      <button>Ethan Rubens</button>
+    </div>
+    <hr>
+    <div class="grid-item" onclick="loadSite('https://liner-notes-chi.vercel.app/')">
+      <button>Liner Notes</button>
+    </div>
+
+  </div>
+
+  <script>
+    function loadSite(url) {
+      window.electronAPI.changeSite(url);
+    }
+  </script>
+</body>
+</html>
