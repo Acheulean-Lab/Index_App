@@ -23,5 +23,5 @@ npm start
 
 - **main.js**: Manages window lifecycle and layout.
 - **index.html**: Persistent navigation UI.
-- **home.html**: Dashboard grid home page.
+- **nav.html**: Back button.
 - **preload.js**: Secure IPC bridge.
