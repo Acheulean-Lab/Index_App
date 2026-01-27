@@ -11,7 +11,7 @@ A simple desktop application built with Electron.js to serve as an index for var
 ### Installation & Running
 
 ```bash
-git clone https://github.com/Acheulean-Lab/electronTest
+git clone https://github.com/Acheulean-Lab/Index_App
 cd electrontest
 
 npm install
