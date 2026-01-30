@@ -1,5 +1,8 @@
 # Electron Web Index
 
+![Index_UI](https://github.com/user-attachments/assets/75552e28-1a39-4f24-8c49-f0289681e991)
+
+
 A simple desktop application built with Electron to index webpages of various origin.
 
 Entries in **index-data.json** are automatically populated into **home.html** when you run `npm start` or `npm run build`.
